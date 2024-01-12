@@ -29,6 +29,8 @@ import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
 import { SelectAll } from '@ckeditor/ckeditor5-select-all';
 import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
+import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+
 import {
 	SpecialCharacters,
 	SpecialCharactersArrows,
@@ -96,7 +98,8 @@ class Editor extends ClassicEditor {
 		TodoList,
 		Underline,
 		Undo,
-		WordCount
+		WordCount,
+    GeneralHtmlSupport
 	];
 
 	public static override defaultConfig: EditorConfig = {
