@@ -30,6 +30,7 @@ import { SelectAll } from '@ckeditor/ckeditor5-select-all';
 import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
+import Abbreviation from './abbreviation/abbreviation';
 
 import {
 	SpecialCharacters,
@@ -99,7 +100,8 @@ class Editor extends ClassicEditor {
 		Underline,
 		Undo,
 		WordCount,
-    GeneralHtmlSupport
+    GeneralHtmlSupport,
+    Abbreviation
 	];
 
 	public static override defaultConfig: EditorConfig = {
