@@ -31,6 +31,7 @@ import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 import Abbreviation from './abbreviation/abbreviation';
+import IndentListStyling from './indentListStyling';
 
 import {
 	SpecialCharacters,
@@ -101,7 +102,8 @@ class Editor extends ClassicEditor {
 		Undo,
 		WordCount,
     GeneralHtmlSupport,
-    Abbreviation
+    Abbreviation,
+    IndentListStyling
 	];
 
 	public static override defaultConfig: EditorConfig = {
