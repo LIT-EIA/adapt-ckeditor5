@@ -2,7 +2,6 @@ import Plugin from '@ckeditor/ckeditor5-core/src/plugin';
 
 export default class IndentListStyling extends Plugin {
   init() {
-    console.log('CustomIndent was initialized. this: ', this);
 
     // Listen to the 'indentList' command execution.
     this.editor.commands.get('indentList').on('execute', () => {
@@ -14,14 +13,24 @@ export default class IndentListStyling extends Plugin {
       blocksInSelection.forEach(block => {
         // Check if the block is a list item.
         if (block.name === 'listItem') {
-          
           if (block._attrs && block._attrs.has("listType") && block._attrs.get("listType") === "numbered") {
+            const indentationLevel = block._attrs.get("listIndent") - 1;
+
+            const listStyle = this.getListStyle(indentationLevel);
+
             this.editor.model.change(writer => {
-              writer.setAttribute('listStyle', 'lower-latin', block);
+              writer.setAttribute('listStyle', listStyle, block);
             });
           }
         }
       });
     });
+  }
+
+  getListStyle(indentationLevel) {
+    const styles = ['lower-latin', 'lower-roman', 'upper-latin', 'upper-roman'];
+    const maxIndentation = styles.length - 1;
+
+    return styles[Math.min(indentationLevel, maxIndentation)];
   }
 }
