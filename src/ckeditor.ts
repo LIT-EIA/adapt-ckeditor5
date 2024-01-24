@@ -19,6 +19,9 @@ import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
 import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
+import { Heading } from '@ckeditor/ckeditor5-heading';
+import { HeadingButtonsUI } from '@ckeditor/ckeditor5-heading';
+import { ParagraphButtonUI } from '@ckeditor/ckeditor5-paragraph';
 import { Indent, IndentBlock } from '@ckeditor/ckeditor5-indent';
 import { TextPartLanguage } from '@ckeditor/ckeditor5-language';
 import { Link } from '@ckeditor/ckeditor5-link';
@@ -68,6 +71,9 @@ class Editor extends ClassicEditor {
 		FontColor,
 		FontFamily,
 		FontSize,
+    Heading,
+    HeadingButtonsUI,
+    ParagraphButtonUI,
 		Indent,
 		IndentBlock,
 		Italic,
