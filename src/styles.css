@@ -26,3 +26,9 @@
 .ck.ck-table-properties-form .ck-form__row.ck-table-properties-form__alignment-row {
   display: none;
 }
+
+.ck.ck-dropdown .ck-button.ck-dropdown__button .ck-button__label {
+    overflow: unset;
+    text-overflow: unset;
+    width: 100%;
+}
