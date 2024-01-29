@@ -39,7 +39,6 @@ import ItalicsAsEm from './ItalicAsEm';
 
 import {
 	SpecialCharacters,
-	SpecialCharactersArrows,
 	SpecialCharactersCurrency,
 	SpecialCharactersEssentials,
 	SpecialCharactersLatin,
@@ -89,9 +88,7 @@ class Editor extends ClassicEditor {
 		ShowBlocks,
 		SourceEditing,
 		SpecialCharacters,
-		SpecialCharactersArrows,
 		SpecialCharactersCurrency,
-		SpecialCharactersEssentials,
 		SpecialCharactersLatin,
 		SpecialCharactersMathematical,
 		SpecialCharactersText,
