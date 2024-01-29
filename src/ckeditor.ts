@@ -18,7 +18,7 @@ import { BlockQuote } from '@ckeditor/ckeditor5-block-quote';
 import type { EditorConfig } from '@ckeditor/ckeditor5-core';
 import { Essentials } from '@ckeditor/ckeditor5-essentials';
 import { FindAndReplace } from '@ckeditor/ckeditor5-find-and-replace';
-import { FontBackgroundColor, FontColor, FontFamily, FontSize } from '@ckeditor/ckeditor5-font';
+import { FontBackgroundColor, FontColor, FontSize } from '@ckeditor/ckeditor5-font';
 import { Heading } from '@ckeditor/ckeditor5-heading';
 import { HeadingButtonsUI } from '@ckeditor/ckeditor5-heading';
 import { ParagraphButtonUI } from '@ckeditor/ckeditor5-paragraph';
@@ -28,6 +28,7 @@ import { Link } from '@ckeditor/ckeditor5-link';
 import { List, ListProperties, TodoList } from '@ckeditor/ckeditor5-list';
 import { Paragraph } from '@ckeditor/ckeditor5-paragraph';
 import { PasteFromOffice } from '@ckeditor/ckeditor5-paste-from-office';
+import PastePlainText from './pasteAsPlainText';
 import { RemoveFormat } from '@ckeditor/ckeditor5-remove-format';
 import { SelectAll } from '@ckeditor/ckeditor5-select-all';
 import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
@@ -69,7 +70,6 @@ class Editor extends ClassicEditor {
 		FindAndReplace,
 		FontBackgroundColor,
 		FontColor,
-		FontFamily,
 		FontSize,
     Heading,
     HeadingButtonsUI,
@@ -83,6 +83,7 @@ class Editor extends ClassicEditor {
 		ListProperties,
 		Paragraph,
 		PasteFromOffice,
+    PastePlainText,
 		RemoveFormat,
 		SelectAll,
 		ShowBlocks,
