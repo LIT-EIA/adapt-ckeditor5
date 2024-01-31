@@ -34,8 +34,9 @@ import { ShowBlocks } from '@ckeditor/ckeditor5-show-blocks';
 import { SourceEditing } from '@ckeditor/ckeditor5-source-editing';
 import { GeneralHtmlSupport } from '@ckeditor/ckeditor5-html-support';
 import Abbreviation from './abbreviation/abbreviation';
+import HeadingsToParagraph from './tagConversions/headingsToParagraph';
 import IndentListStyling from './indentListStyling';
-import ItalicsAsEm from './ItalicAsEm';
+import ItalicsAsEm from './tagConversions/italicAsEm';
 
 import {
 	SpecialCharacters,
@@ -73,6 +74,7 @@ class Editor extends ClassicEditor {
     FontFamily,
 		FontSize,
     ParagraphButtonUI,
+    HeadingsToParagraph,
 		Indent,
 		IndentBlock,
 		Italic,

@@ -5,8 +5,6 @@ export default class ItalicsAsEm extends Plugin {
     return 'ItalicsAsEm';
   }
   init() {
-    console.log('ItalicsAsEm#init() got called');
-
     this.editor.conversion.for('downcast').attributeToElement({
       model: 'italic',
       view: 'em',
