@@ -17,15 +17,24 @@ export default class AbbreviationUI extends Plugin {
 
 	init() {
 		const editor = this.editor;
+    window.CKEDITOR_TRANSLATIONS = window.CKEDITOR_TRANSLATIONS || {};
 
-        // Create the balloon and the form view.
+    window.CKEDITOR_TRANSLATIONS['fr'] = window.CKEDITOR_TRANSLATIONS['fr'] || {};
+    window.CKEDITOR_TRANSLATIONS['fr'].dictionary = window.CKEDITOR_TRANSLATIONS['fr'].dictionary || {};
+
+    Object.assign(window.CKEDITOR_TRANSLATIONS['fr'].dictionary, {
+      'Abbreviation': 'Abréviation'
+    });
+
+    // Create the balloon and the form view.
 		this._balloon = this.editor.plugins.get( ContextualBalloon );
 		this.formView = this._createFormView();
 
 		editor.ui.componentFactory.add( 'abbreviation', () => {
 			const button = new ButtonView();
+      const { t } = editor.locale;
 
-			button.label = 'Abbreviation';
+			button.label = t('Abbreviation');
 			button.tooltip = true;
 			button.withText = true;
 

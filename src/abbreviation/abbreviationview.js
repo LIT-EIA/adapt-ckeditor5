@@ -14,23 +14,37 @@ import {
 import { FocusTracker, KeystrokeHandler } from '@ckeditor/ckeditor5-utils';
 import { icons } from '@ckeditor/ckeditor5-core';
 
+window.CKEDITOR_TRANSLATIONS = window.CKEDITOR_TRANSLATIONS || {};
+
+window.CKEDITOR_TRANSLATIONS['fr'] = window.CKEDITOR_TRANSLATIONS['fr'] || {};
+window.CKEDITOR_TRANSLATIONS['fr'].dictionary = window.CKEDITOR_TRANSLATIONS['fr'].dictionary || {};
+
+Object.assign(window.CKEDITOR_TRANSLATIONS['fr'].dictionary, {
+  'Add abbreviation': 'Ajouter une abréviation',
+  'Add title': 'Ajouter un titre',
+  'Save': 'Sauvegarder',
+  'Cancel': 'Annuler'
+});
+
 export default class FormView extends View {
 	constructor( locale ) {
 		super( locale );
 
+    console.log('abbreviation view this: ', this);
+
 		this.focusTracker = new FocusTracker();
 		this.keystrokes = new KeystrokeHandler();
 
-		this.abbrInputView = this._createInput( 'Add abbreviation' );
-		this.titleInputView = this._createInput( 'Add title' );
+		this.abbrInputView = this._createInput( this.t('Add abbreviation') );
+		this.titleInputView = this._createInput( this.t('Add title') );
 
-		this.saveButtonView = this._createButton( 'Save', icons.check, 'ck-button-save' );
+		this.saveButtonView = this._createButton( this.t('Save'), icons.check, 'ck-button-save' );
 
 		// Submit type of the button will trigger the submit event on entire form when clicked 
 		//(see submitHandler() in render() below).
 		this.saveButtonView.type = 'submit';
 
-		this.cancelButtonView = this._createButton( 'Cancel', icons.cancel, 'ck-button-cancel' );
+		this.cancelButtonView = this._createButton( this.t('Cancel'), icons.cancel, 'ck-button-cancel' );
 
 		// Delegate ButtonView#execute to FormView#cancel.
 		this.cancelButtonView.delegate( 'execute' ).to( this, 'cancel' );
