@@ -54,6 +54,7 @@ import {
 	TableProperties,
 	TableToolbar
 } from '@ckeditor/ckeditor5-table';
+import { Dialog } from '@ckeditor/ckeditor5-ui/src';
 import { Undo } from '@ckeditor/ckeditor5-undo';
 import { EditorWatchdog } from '@ckeditor/ckeditor5-watchdog';
 import { WordCount } from '@ckeditor/ckeditor5-word-count';
@@ -67,6 +68,7 @@ class Editor extends ClassicEditor {
 		BlockQuote,
 		Bold,
     Clipboard,
+    Dialog,
 		Essentials,
 		FindAndReplace,
 		FontBackgroundColor,
