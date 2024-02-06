@@ -12,16 +12,14 @@ export default class IndentListStyling extends Plugin {
 
       blocksInSelection.forEach(block => {
         // Check if the block is a list item.
-        if (block.name === 'listItem') {
-          if (block._attrs && block._attrs.has("listType") && block._attrs.get("listType") === "numbered") {
-            const indentationLevel = block._attrs.get("listIndent") - 1;
+        if (block._attrs && block._attrs.has("listType") && block._attrs.get("listType") === "numbered") {
+          const indentationLevel = block._attrs.get("listIndent") - 1;
 
-            const listStyle = this.getListStyle(indentationLevel);
+          const listStyle = this.getListStyle(indentationLevel);
 
-            this.editor.model.change(writer => {
-              writer.setAttribute('listStyle', listStyle, block);
-            });
-          }
+          this.editor.model.change(writer => {
+            writer.setAttribute('listStyle', listStyle, block);
+          });
         }
       });
     });

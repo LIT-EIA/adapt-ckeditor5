@@ -30,8 +30,6 @@ export default class FormView extends View {
 	constructor( locale ) {
 		super( locale );
 
-    console.log('abbreviation view this: ', this);
-
 		this.focusTracker = new FocusTracker();
 		this.keystrokes = new KeystrokeHandler();
 
