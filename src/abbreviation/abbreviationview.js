@@ -23,7 +23,8 @@ Object.assign(window.CKEDITOR_TRANSLATIONS['fr'].dictionary, {
   'Add abbreviation': 'Ajouter une abréviation',
   'Add title': 'Ajouter un titre',
   'Save': 'Sauvegarder',
-  'Cancel': 'Annuler'
+  'Cancel': 'Annuler',
+  'Remove Format': 'Supprimer le format'
 });
 
 export default class FormView extends View {

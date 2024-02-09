@@ -37,6 +37,8 @@ import Abbreviation from './abbreviation/abbreviation';
 import HeadingsToParagraph from './tagConversions/headingsToParagraph';
 import IndentListStyling from './indentListStyling';
 import ItalicsAsEm from './tagConversions/italicAsEm';
+import TranslationFr from './translationOverrides/translationFR';
+
 
 import {
 	SpecialCharacters,
@@ -67,26 +69,26 @@ class Editor extends ClassicEditor {
 		Alignment,
 		BlockQuote,
 		Bold,
-    Clipboard,
-    Dialog,
+		Clipboard,
+		Dialog,
 		Essentials,
 		FindAndReplace,
 		FontBackgroundColor,
 		FontColor,
-    FontFamily,
+		FontFamily,
 		FontSize,
-    ParagraphButtonUI,
-    HeadingsToParagraph,
+		ParagraphButtonUI,
+		HeadingsToParagraph,
 		Indent,
 		IndentBlock,
 		Italic,
-    ItalicsAsEm,
+		ItalicsAsEm,
 		Link,
 		List,
 		ListProperties,
 		Paragraph,
 		PasteFromOffice,
-    PastePlainText,
+		PastePlainText,
 		RemoveFormat,
 		SelectAll,
 		ShowBlocks,
@@ -110,9 +112,10 @@ class Editor extends ClassicEditor {
 		Underline,
 		Undo,
 		WordCount,
-    GeneralHtmlSupport,
-    Abbreviation,
-    IndentListStyling
+		GeneralHtmlSupport,
+		Abbreviation,
+		IndentListStyling,
+		TranslationFr
 	];
 
 	public static override defaultConfig: EditorConfig = {
