@@ -7,13 +7,16 @@ export default class TranslationFr extends Plugin {
   init() {
 		const editor = this.editor;
     window.CKEDITOR_TRANSLATIONS = window.CKEDITOR_TRANSLATIONS || {};
-
     window.CKEDITOR_TRANSLATIONS['fr'] = window.CKEDITOR_TRANSLATIONS['fr'] || {};
     window.CKEDITOR_TRANSLATIONS['fr'].dictionary = window.CKEDITOR_TRANSLATIONS['fr'].dictionary || {};
 
     Object.assign(window.CKEDITOR_TRANSLATIONS['fr'].dictionary, {
       'Remove format': 'Supprimer le format',
-      'Remove color': "Supprimer la couleur"
+      'Remove color': "Supprimer la couleur",
+      'Big': '140%',
+      'Huge': '180%',
+      'Choose language': "Langue d'un passage"
     });
+    
   }
 }

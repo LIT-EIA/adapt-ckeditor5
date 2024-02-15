@@ -38,6 +38,8 @@ import HeadingsToParagraph from './tagConversions/headingsToParagraph';
 import IndentListStyling from './indentListStyling';
 import ItalicsAsEm from './tagConversions/italicAsEm';
 import TranslationFr from './translationOverrides/translationFR';
+import TranslationEn from './translationOverrides/translationEN';
+
 
 
 import {
@@ -66,6 +68,8 @@ import { WordCount } from '@ckeditor/ckeditor5-word-count';
 
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
+		TranslationFr,
+		TranslationEn,
 		Alignment,
 		BlockQuote,
 		Bold,
@@ -114,8 +118,7 @@ class Editor extends ClassicEditor {
 		WordCount,
 		GeneralHtmlSupport,
 		Abbreviation,
-		IndentListStyling,
-		TranslationFr
+		IndentListStyling
 	];
 
 	public static override defaultConfig: EditorConfig = {
