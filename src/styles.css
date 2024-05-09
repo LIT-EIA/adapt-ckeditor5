@@ -32,3 +32,7 @@
     text-overflow: unset;
     width: 100%;
 }
+
+figure.table {
+  width: 100%
+}
